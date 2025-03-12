@@ -6,6 +6,8 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 import { FaGithub } from "react-icons/fa6";
 import { motion } from 'framer-motion';
+import { Typewriter } from 'react-simple-typewriter'
+
 const techName = ['Frontend', 'Backend', 'Database', 'CMS', 'Tools'];
 const tech = [{
   category: 'Frontend',
@@ -72,6 +74,12 @@ const ExtendedHero = () => {
     <div className='bg-[#111826]'>
       <div className='md:container  px-[32px] mx-auto md:px-40 bg-[url("/aa.jpg")] pb-8 bg-cover bg-no-repeat bg-center'>
         <h2 className='text-xl leading-7 text-wrap text-white pb-6 pt-8'>We harness the essence of Web 3.0 and emerging technologies to architect inventive, intelligent, and sustainable web development solutions and services. As a leading IT service provider and software company, our forte lies in ideation, skillfully connecting the dots to shape a more advanced and audacious digital future.</h2>
+        <div className='text-center text-2xl text-white font-semibold my-4'>
+          <Typewriter
+            words={['Farseit pioneers innova ', "Empowering the future digital lands"]}
+            loop={0}
+          />
+        </div>
         <motion.div
           ref={ref}
           initial={{ y: 100, opacity: 0 }}
@@ -103,7 +111,6 @@ const ExtendedHero = () => {
                           < IconItem />
                         </span>
 
-
                       ))
 
                     }
@@ -114,6 +121,7 @@ const ExtendedHero = () => {
             }
           </div>
         </motion.div>
+        <div className='text-white text-xl mt-4'></div>
 
       </div>
     </div>
