@@ -11,7 +11,7 @@ const PerSecurity = () => {
       {/* Title */}
       <h1 className="text-3xl font-semibold  z-10 text-white container mx-auto text-center p-2">Performance & Security</h1>
       {/* Overlay Content */}
-      <div className="flex flex-col items-center justify-between text-center text-white bg-[url('@/public/sequrity.png')] bg-cover bg-no-repeat container mx-auto bg-center h-[400px]">
+      <div className="flex flex-col items-center justify-between text-center text-white bg-[url('/sequrity.png')] bg-cover bg-no-repeat container mx-auto bg-center h-[400px]">
 
 
         {/* Lock Icon (Replace with your icon or an SVG) */}

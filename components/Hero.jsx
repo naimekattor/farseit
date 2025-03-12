@@ -19,7 +19,7 @@ const Hero = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <div className='container mx-auto bg-[url("@/public/home.jpg")] bg-center bg-no-repeat bg-cover md:py-58 py-16'>
+    <div className='container mx-auto bg-[url("/home.jpg")] bg-center bg-no-repeat bg-cover md:py-58 py-16'>
       <div className='flex md:flex-row flex-col-reverse  items-center md:justify-center justify-end'>
         <div className=' flex-1 p-8'>
           <motion.div

@@ -69,7 +69,7 @@ const ExtendedHero = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <div className='md:container px-[32px] mx-auto md:px-40 bg-[url("@/public/aa.jpg")] pb-8 bg-cover bg-no-repeat bg-center'>
+    <div className='md:container px-[32px] mx-auto md:px-40 bg-[url("/aa.jpg")] pb-8 bg-cover bg-no-repeat bg-center'>
       <h2 className='text-xl leading-7 text-wrap text-white pb-6 pt-8'>We harness the essence of Web 3.0 and emerging technologies to architect inventive, intelligent, and sustainable web development solutions and services. As a leading IT service provider and software company, our forte lies in ideation, skillfully connecting the dots to shape a more advanced and audacious digital future.</h2>
       <motion.div
         ref={ref}
