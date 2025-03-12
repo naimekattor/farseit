@@ -46,7 +46,7 @@ const Contact = () => {
 
   return (
     <div id='contact' className='bg-[#111826] py-[60px]'>
-      <div className="container mx-auto  bg-gray-900  flex gap-12">
+      <div className="container mx-auto  bg-gray-900  flex md:flex-row flex-col gap-12">
         <motion.div
           ref={ref}
           initial={{ x: 100, opacity: 0 }}

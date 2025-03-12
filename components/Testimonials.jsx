@@ -21,13 +21,22 @@ const Testimonial = () => {
   ];
 
   const settings = {
-    dots: false, // You can add dots if you want
+    // You can add dots if you want
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // Auto-slide every 5 seconds
+    autoplaySpeed: 5000, // Auto-slide every 5 seconds,
+    responsive: [
+      {
+        breakpoint: 768, // Mobile breakpoint
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
     arrows: true, // Show navigation arrows
   };
 
