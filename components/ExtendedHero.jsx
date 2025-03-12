@@ -69,51 +69,53 @@ const ExtendedHero = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <div className='md:container px-[32px] mx-auto md:px-40 bg-[url("/aa.jpg")] pb-8 bg-cover bg-no-repeat bg-center'>
-      <h2 className='text-xl leading-7 text-wrap text-white pb-6 pt-8'>We harness the essence of Web 3.0 and emerging technologies to architect inventive, intelligent, and sustainable web development solutions and services. As a leading IT service provider and software company, our forte lies in ideation, skillfully connecting the dots to shape a more advanced and audacious digital future.</h2>
-      <motion.div
-        ref={ref}
-        initial={{ y: 100, opacity: 0 }}
-        animate={isVisible ? { y: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <div>
-          <ul className='grid grid-cols-5 rounded-md p-2 gap-4 justify-between bg-[#111826] text-white'>
+    <div className='bg-[#111826]'>
+      <div className='md:container  px-[32px] mx-auto md:px-40 bg-[url("/aa.jpg")] pb-8 bg-cover bg-no-repeat bg-center'>
+        <h2 className='text-xl leading-7 text-wrap text-white pb-6 pt-8'>We harness the essence of Web 3.0 and emerging technologies to architect inventive, intelligent, and sustainable web development solutions and services. As a leading IT service provider and software company, our forte lies in ideation, skillfully connecting the dots to shape a more advanced and audacious digital future.</h2>
+        <motion.div
+          ref={ref}
+          initial={{ y: 100, opacity: 0 }}
+          animate={isVisible ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div>
+            <ul className='grid grid-cols-5 rounded-md p-2 gap-4 justify-between bg-[#111826] text-white'>
+              {
+                techName.map((name) => (
+                  <li key={name} onClick={() => handleTech(name)} className={`${category === name ? 'bg-[#1f2937]' : ''} inline-flex items-center justify-center px-3 py-1 rounded-md text-sm font-medium whitespace-nowrap`}>{name}</li>
+                ))
+              }
+            </ul>
+
+          </div>
+          <div className='bg-[#1f2937] p-[24px] mt-4 rounded-md '>
             {
-              techName.map((name) => (
-                <li key={name} onClick={() => handleTech(name)} className={`${category === name ? 'bg-[#1f2937]' : ''} inline-flex items-center justify-center px-3 py-1 rounded-md text-sm font-medium whitespace-nowrap`}>{name}</li>
+              techItems.map((tech) => (
+                <div key={tech.title}>
+                  <h1 className='text-[16px] font-semibold text-white'>{tech.title}
+                  </h1>
+                  <p className='text-[14px] text-[#7c8b9c]'>{tech.des}</p>
+                  <div className='flex  gap-4 items-center text-7xl flex-wrap mt-[24px] text-white '>
+                    {
+                      tech.Icon.map((IconItem, index) => (
+
+                        <span key={index} className="p-2 text-white rounded-lg">
+                          < IconItem />
+                        </span>
+
+
+                      ))
+
+                    }
+
+                  </div>
+                </div>
               ))
             }
-          </ul>
+          </div>
+        </motion.div>
 
-        </div>
-        <div className='bg-[#1f2937] p-[24px] mt-4 rounded-md '>
-          {
-            techItems.map((tech) => (
-              <div key={tech.title}>
-                <h1 className='text-[16px] font-semibold text-white'>{tech.title}
-                </h1>
-                <p className='text-[14px] text-[#7c8b9c]'>{tech.des}</p>
-                <div className='flex  gap-4 items-center text-7xl flex-wrap mt-[24px] text-white '>
-                  {
-                    tech.Icon.map((IconItem, index) => (
-
-                      <span key={index} className="p-2 text-white rounded-lg">
-                        < IconItem />
-                      </span>
-
-
-                    ))
-
-                  }
-
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </motion.div>
-
+      </div>
     </div>
   );
 };
